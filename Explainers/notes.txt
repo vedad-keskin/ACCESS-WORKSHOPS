@@ -1,0 +1,52 @@
+RAZLIKA IZMEDJU DVA DANA : DateDiff ("d"; DATUM 1 ; DATUM 2)
+DateDiff("d";"«Expr» [Orders]![OrderDate] ";"«Expr» [Orders]![ShippedDate] ")
+DateDiff("d";[Orders].[OrderDate];[Orders].[ShippedDate]) - OVAKO 
+
+IIf(Right(Left([Customers].[ContactName];InStr(1;[Customers].[ContactName];" ";1)-1);1)="a";"F";"M")
+SKONTAJ
+
+UKUPAN BROJ : COUNT
+UKUPNA KOLICINA : SUM
+UKUPNA VRIJEDNOST : SUM( * ) -- experssion
+
+ISPISAT SAMO JEDNU DRZAVU 
+Tablela sa drzavom
+Sve drzave where [4_1].[Country]
+tek ce onda radit pretrage kako trebaju
+
+KVARTALI 
+DatePart("q";datum) i kriterij 4
+
+ZAOKRUZI NA DVIJE DECIMALE 
+Round(   ;2) 
+
+novi zapis
+GoToRecord
+new Form -> 3a -> new 
+
+Računanje popusta
+Sum(Round( cijena * (1 - discount )* quantity ;2) -- BEZ ZAOKURZIVANJA NA DECIMALE
+Sum(cijena * (1-discount.value)* quantity)
+
+
+Len(Replace([Product]![p_name];" ";"**"))
+Len([Product]![p_name])+2   DOBIJEMO ISTI BROJ JER MORAJU IMAT VISKA DVA PROSTORA
+
+dodati kom  - convert to string
+CStr(quantity) + "kom"
+
+kada traze sve customere koji nisu izvrsili narudbe ide normalno is null id 
+i ides join i uzmes samo customere
+
+Ide prva dva ZIP pa State pa ostala ZIP 
+Left([Customers].[ZIP/Postal Code];2)+[Customers].[State/Province]+Right([Customers].[ZIP/Postal Code];Len([Customers].[ZIP/Postal Code])-2)
+
+Da se ne ponavljaju ID uzeti Product Name i ugasiti show i staviti Unique values yes samo uzeti kao where product name
+
+Kad traze opis : IZVANDREDAN onda ne moras pravit polje samo stavis Opis:"Izvandredan" u upit 
+
+Ako ti kineske znakove pise u company name slobodno idi Cstr(Company)
+
+Uvozi najvise proizvoda -> Sum quantity
+
+Customer koji ima najvise naruzbi iz neke drzave Customer ima svoj COuntry nemoj COuntry iz suppliera

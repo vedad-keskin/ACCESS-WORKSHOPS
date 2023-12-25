@@ -1,0 +1,6 @@
+Samo brojevi : Like "#####" 
+Vise manje slova Len([polje]) = 4 npr. 
+Samo slova : Not Like "*[!a-z]*"
+LCase - u mala slova 
+CStr pretvori u string 
+2 velika slova Like "[A-Z][A-Z]"
